@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://ma08calgg6qm"]
+
+[ext_resource type="Texture2D" uid="uid://cel513wglmtm" path="res://dodgethebugs-main/assets/blue_beetle.png" id="1_f7pvl"]
+[ext_resource type="Texture2D" uid="uid://brhog1m1jtuq2" path="res://dodgethebugs-main/assets/red_beetle.png" id="2_ykxto"]
+[ext_resource type="Texture2D" uid="uid://8moul5k4lp4b" path="res://dodgethebugs-main/assets/yellow_beetle.png" id="3_00lgl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yjryq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f7pvl")
+}],
+"loop": true,
+"name": &"blue_beatle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ykxto")
+}],
+"loop": true,
+"name": &"red_beatle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_00lgl")
+}],
+"loop": true,
+"name": &"yeellow_beatle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pcd0r"]
+radius = 349.857
+
+[node name="enemy" type="RigidBody2D"]
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(303, 93.0001)
+scale = Vector2(3.90625, 3.34375)
+sprite_frames = SubResource("SpriteFrames_yjryq")
+animation = &"red_beatle"
+
+[node name="colision" type="CollisionShape2D" parent="."]
+position = Vector2(296, 96)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_pcd0r")

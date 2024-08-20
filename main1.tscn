@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ibnacyr01egr"]
+
+[ext_resource type="PackedScene" uid="uid://3tf5kkyv2taa" path="res://pedgui.tscn" id="1_pwl8u"]
+
+[node name="main" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_pwl8u")]
+position = Vector2(327, 251)
